@@ -17,7 +17,7 @@ if not typescript_setup then
 end
 
 local keymap = vim.keymap -- for conciseness
-local util = require "lspconfig/util"
+local util = require("lspconfig/util")
 
 -- enable keybinds only for when lsp server available
 local on_attach = function(client, bufnr)
@@ -104,6 +104,15 @@ lspconfig.gopls.setup({
 				unusedparams = true,
 			},
 		},
+	},
+})
+
+lspconfig.solidity.setup({
+	default_config = {
+		cmd = { "nomicfoundation-solidity-language-server", "--stdio" },
+		filetypes = { "solidity" },
+		root_dir = lspconfig.util.find_git_ancestor,
+		single_file_support = true,
 	},
 })
 
