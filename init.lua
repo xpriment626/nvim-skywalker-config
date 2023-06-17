@@ -1,0 +1,8 @@
+require("vault66.plugins-setup")
+require("vault66.core.options")
+require("vault66.core.colorscheme")
+require("vault66.core.keymaps")
+require("vault66.plugins.comment")
+require("vault66.plugins.nvim-tree")
+require("vault66.plugins.lualine")
+require("vault66.plugins.telescope")
